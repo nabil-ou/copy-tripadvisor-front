@@ -1,0 +1,1059 @@
+/* COMMON RULES */
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Trip Sans reg", "Trip Sans med";
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+section {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+h1 {
+  font-size: 7.2rem;
+  letter-spacing: 1.4px;
+  line-height: 8.64rem;
+  font-weight: 800;
+  padding-top: 26px;
+  padding-bottom: 4px;
+}
+
+h1 span {
+  color: #ff5d5d;
+}
+
+h2 {
+  font-size: 3.2rem;
+  letter-spacing: 0.6px;
+  line-height: 3.84rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+h3 {
+  font-size: 3.2rem;
+  letter-spacing: 0px;
+  line-height: 4rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Taille par défaut des icones */
+i {
+  font-size: 2.5rem;
+  font-weight: 1000;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  box-shadow: none;
+  border-style: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #474747;
+}
+
+p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Rendre toute la div cliquable */
+.divlink {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  z-index: 10;
+  background-color: #fff;
+  opacity: 0;
+  filter: alpha(opacity=1);
+}
+
+/* bouton "Tout afficher" */
+section .seeall {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 18px;
+}
+
+.seeall a:hover,
+.path a:hover {
+  color: #545454;
+  text-decoration: underline;
+}
+
+/* nom de section avec lignes */
+.linetext h2 {
+  margin-bottom: 42px;
+  text-align: center;
+  position: relative;
+}
+
+.linetext h2 span {
+  background-color: white;
+  padding: 0 10px;
+}
+
+.linetext h2::before {
+  content: "Read this: ";
+  display: block;
+  content: "";
+  position: absolute;
+  top: calc(50% - 0px);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  border-bottom: 1px solid #000;
+}
+
+/* Bouton "favoris" */
+
+.fav-circle i,
+.fav-circle-hover i {
+  font-size: 2.4rem;
+}
+
+.fav-circle {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.fav-circle-hover {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: transparent;
+  color: transparent;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.fav-circle-hover:hover {
+  color: crimson;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Notations */
+.icon-bubble_rating_full_refresh,
+.icon-bubble_rating_empty_refresh,
+.icon-bubble_rating_half_refresh {
+  color: #00aa6c;
+  font-size: 1.4rem;
+  margin-right: -2px;
+}
+
+.icon-times {
+  font-size: 1.2rem;
+}
+
+.icon-menu_bars {
+  font-size: 4rem;
+}
+
+.icon-caret_down {
+  font-size: 0.8rem;
+}
+
+/* POP-UP FORMULAIRE */
+.popup {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupbackground {
+  background: black;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.popupbody {
+  width: 328px;
+  padding: 30px 45px 50px;
+  background-color: white;
+  color: #000;
+  opacity: 1;
+  position: absolute;
+  border-radius: 12px;
+}
+
+#registerForm.icon-times {
+  text-align: right;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+#registerForm {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#registerForm h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#registerForm input,
+#registerForm textarea {
+  outline: none;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  box-shadow: none;
+  font-family: inherit;
+  border-radius: 6px;
+  border: #058171 solid 1px;
+}
+
+#registerForm .submit {
+  background-color: #058171;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.visible {
+  display: flex;
+  transition: 0.5s linear;
+}
+
+.hidden {
+  display: none;
+  transition: 0.1s linear;
+}
+
+/* RESPONSIVE ITEMS */
+.mobile-only {
+  display: inherit;
+  margin-left: 20px;
+}
+
+.desktop-only {
+  display: none;
+}
+
+/* -------------------------------------- */
+
+/* HEADER */
+header {
+  width: 100%;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav {
+  width: 100%;
+}
+
+.main-nav .logo-search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: flex-start;
+}
+
+/* Logo */
+.main-nav .logo-search img {
+  width: 188px;
+  margin-right: 24px;
+}
+
+/* Search bar */
+.main-nav .logo-search .searchbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+  font-size: 1.6rem;
+  font-family: "Trip Sans";
+  font-weight: 400;
+}
+
+.searchbar input[type="text"]:focus,
+.searchbar input[type="text"]:active {
+  outline: none;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+.main-nav .logo-search .searchbar input {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2px 12px 0 40px;
+  height: 38px;
+  width: 100%;
+  outline: none;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+.main-nav .logo-search .searchbar i {
+  position: absolute;
+  padding: 0 0 0 10px;
+}
+
+/* Menu du haut */
+.main-nav #desktop-menu {
+  display: none;
+}
+
+.main-nav #mobile-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main-nav nav ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid white;
+  border-radius: 12px;
+  height: 36px;
+  padding: 0 10px;
+  transition: border-color 0.2s;
+  margin-right: 3px;
+  position: relative;
+}
+.main-nav nav ul li span {
+  margin-left: 4px;
+}
+
+.main-nav nav ul li:hover {
+  color: #000;
+  text-decoration: none;
+  border: 2px solid #000;
+}
+
+.main-nav nav div,
+.main-nav nav button {
+  padding: 10px 14px;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.main-nav,
+.main-nav nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---------------------------------------------- */
+/* SECTION I - EXPLOREZ PARIS  */
+#explorez-paris {
+  margin-top: 0;
+}
+
+/* SUBMENU */
+.submenu {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 20px;
+}
+
+.submenu ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: -16px;
+}
+
+.submenu ul li {
+  position: relative;
+  margin-top: 16px;
+  padding: 16px 0;
+  border-radius: 12px;
+  border: solid black 1px;
+  padding: 11px 13px 11px 14px;
+  flex: 0 0 calc(25% - 60px);
+  min-height: 40px;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.submenu i {
+  padding: 5px;
+}
+
+.submenu span {
+  display: none;
+}
+
+.submenu ul li:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* ---------------------------------------------- */
+/* PHOTOS */
+
+.pictures {
+  display: flex;
+  margin: 0 0 20px 0;
+  height: 50vh;
+  max-height: 600px;
+  position: relative;
+}
+
+.lgPic {
+  position: relative;
+  flex: 2;
+  margin-right: 2px;
+  height: 100%;
+  z-index: 0;
+}
+
+.lgPicimg {
+  height: 100%;
+  background-image: url("../img/rue.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px 0 0 12px;
+}
+
+.lgPicimg:hover {
+  opacity: 0.8;
+  transition: opacity 0.1s linear;
+}
+
+.lgPic .allpics {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  font-size: 1.2rem;
+  line-height: 3.2rem;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 0 8px;
+  font-weight: 300;
+  color: white;
+  border-radius: 12px;
+  z-index: 10;
+}
+
+.lgPic .allpics:hover {
+  text-decoration: underline;
+}
+
+.lgPic .allpics i {
+  font-size: 1.5rem;
+}
+
+.addpic {
+  width: 40%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.img1 {
+  flex: 1;
+  margin-bottom: 1px;
+  height: calc(50% - 1px);
+  border-radius: 0 12px 0 0;
+  background-image: url("../img/couple-en-scoot.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  position: relative;
+}
+
+.img2 {
+  flex: 1;
+  margin-top: 1px;
+  height: calc(50% - 1px);
+  border-radius: 0 0 12px 0;
+  background-image: url("../img/tourEffeil.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.img1:hover,
+.img2:hover {
+  opacity: 0.8;
+  transition: opacity 0.1s linear;
+}
+
+.path {
+  font-family: monospace;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 36px;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+}
+
+/* ---------------------------------------------- */
+/* DESCRIPTION */
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.description .cl-left {
+  flex: 1;
+  padding: 20px;
+}
+
+.description .cl-left p {
+  font-size: 2rem;
+}
+
+.description .cl-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.description .cl-right > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.description .cl-right > div > div {
+  background-color: #ff5d5d;
+  border-radius: 12px 12px 0 0;
+  padding: 32px 32px 8px;
+}
+
+.description .cl-right > div > div > div {
+  margin-bottom: 24px;
+}
+
+.description .cl-right > div > div > div:first-child {
+  margin-bottom: 12px;
+}
+
+.description .cl-right p {
+  font-family: "Trip Sans";
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+
+.description .cl-right img {
+  height: 188px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 0 -77px;
+  border-radius: 0 0 12px 12px;
+}
+
+/* ---------------------------------------------- */
+/* CONSEILS DE VOYAGE */
+
+#conseils ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: -17px;
+}
+
+#conseils ul li {
+  margin-top: 16px;
+  flex: 0 0 calc(50% - 34px);
+  padding-left: 12px;
+  border: solid #e0e0e0 2px;
+  border-radius: 12px;
+  margin-left: 17px;
+  display: flex;
+  align-items: center;
+  line-height: 2.8rem;
+  font-size: 2rem;
+  font-weight: 400;
+  position: relative;
+}
+
+#conseils ul li:hover {
+  text-decoration: underline;
+  border: solid black 2px;
+}
+
+#conseils ul li div {
+  padding: 12px 12px 6px 6px;
+}
+
+#conseils ul li img {
+  width: 88px;
+}
+
+/* ---------------------------------------------- */
+/* IMMANQUABLE A PARIS */
+
+.carrousel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.carrousel .cl-1-4 {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.carrousel .cl-1-4 p {
+  margin-top: 10px;
+}
+
+.carrousel .cl-3-4 {
+  flex: 1 0 0;
+  padding: 20px;
+}
+
+.carrousel .cl-3-4 ul {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.carrousel .cl-3-4 ul li {
+  flex: 0 0 auto;
+  width: 100%;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+
+.activity {
+  position: relative;
+  width: 100%;
+}
+
+.activity:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.carrousel .cl-3-4 ul li:last-child {
+  margin-right: 0px;
+}
+
+.carrousel .cl-3-4 ul li img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.desc-carrousel {
+  margin: 12px 0;
+  line-height: 150%;
+  font-size: 1.2rem;
+}
+
+.desc-carrousel h4 {
+  margin-bottom: 8px;
+}
+.desc-carrousel .infos {
+  margin-top: 8px;
+  line-height: 120%;
+  font-size: 1.2rem;
+  font-family: "Trip Sans";
+  display: inline-block;
+}
+.desc-carrousel .avis {
+  font-size: 1.2rem;
+  font-family: "Trip Sans";
+  display: inline-block;
+}
+
+/* -------------------------- */
+/* FORUMS */
+
+#forums .forum-image {
+  text-align: center;
+}
+
+#forums ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#forums ul li {
+  flex: 1;
+  background-color: #faf1ed;
+  box-sizing: border-box;
+  padding: 24px;
+  border-radius: 12px;
+  height: 100%;
+  margin-bottom: 30px;
+}
+
+#forums ul li > span {
+  font-size: 2.4rem;
+}
+
+#forums ul li .author {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+#forums ul li .author img {
+  border-radius: 50px;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+#forums ul li .author div > span {
+  font-weight: 200;
+}
+
+/* ----------------------------- */
+/* LOUER UN LOGEMENT */
+#logement ul {
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  margin-left: -20px;
+}
+
+#logement ul li {
+  margin-left: 20px;
+  min-width: calc(100% / 2 - 20px);
+  margin-bottom: 16px;
+  position: relative;
+}
+
+#logement ul li:last-child {
+  margin-right: 0px;
+}
+
+#logement ul li img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ----------------------------- */
+/* PARIS EST GENIAL */
+#genial ul {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  margin-right: -20px;
+}
+
+#genial #toDo li {
+  flex: 1;
+  margin-right: 20px;
+  max-width: calc(100% / 2);
+  margin-bottom: 16px;
+  position: relative;
+}
+
+#genial #toDo li:first-child {
+  display: none;
+}
+
+#genial #toDo li:last-child {
+  display: none;
+}
+
+#genial li img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ---------------------------------------------- */
+/* FOOTER */
+
+footer {
+  background-color: #faf1ed;
+  padding: 32px 0;
+  margin-top: 50px;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cl-2-3 {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cl-2-3 img {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+}
+
+.cl-1-3 {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+footer select {
+  flex: 1;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 7px 14px;
+  background-color: #fff;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  border: 2px solid #e0e0e0;
+  font-weight: 700;
+  color: #000;
+  width: 100%;
+  margin: 5px 0;
+}
+
+footer #devise {
+  margin-right: 20px;
+}
+
+/* ------------------------- */
+/* RESPONSIVE DESIGN */
+@media (min-width: 576px) {
+  .container {
+    width: 95%;
+  }
+
+  .submenu span {
+    display: flex;
+  }
+  .submenu ul li {
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 calc(50% - 50px);
+  }
+
+  .carrousel {
+    flex-direction: row;
+  }
+  .carrousel .cl-3-4 ul {
+    padding: 0;
+  }
+
+  .carrousel .cl-3-4 ul li {
+    width: calc(100% / 2 - 20px);
+    max-width: calc(100% / 2 - 20px);
+    flex: 0 0 auto;
+    margin-left: 20px;
+    margin-right: 0px;
+    margin-bottom: 5px;
+    position: relative;
+  }
+  .carrousel .cl-3-4 {
+    flex: 3 0 0;
+  }
+
+  ul::-webkit-scrollbar-track {
+    margin-left: 20px;
+  }
+
+  #forums ul {
+    margin-bottom: 0px;
+    margin-right: -20px;
+    flex-direction: row;
+  }
+
+  #forums ul li {
+    margin-right: 20px;
+  }
+
+  #forums .author-name {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #forums ul li:last-child {
+    margin-right: 0px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .main-nav #desktop-menu {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .main-nav #desktop-menu li {
+    margin-right: 7px;
+  }
+
+  .main-nav #mobile-menu {
+    display: none;
+  }
+
+  .main-nav nav ul li span {
+    display: none;
+  }
+
+  .submenu ul li {
+    flex: 0 0 calc(25% - 50px);
+  }
+
+  .description {
+    flex-direction: row;
+  }
+
+  .description .cl-left {
+    padding: 0;
+  }
+
+  .description .cl-right {
+    margin-left: 8%;
+    margin-top: 0px;
+    padding-left: 8px;
+  }
+  .description .cl-right img {
+    object-position: 0;
+  }
+
+  #logement ul li {
+    margin-left: 20px;
+    min-width: calc(100% / 3 - 20px);
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  #genial #toDo li {
+    max-width: calc(100% / 3);
+  }
+
+  #genial #toDo li:first-child {
+    display: inherit;
+  }
+
+  footer > div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  footer select {
+    margin: 5px 0;
+  }
+
+  .cl-2-3 {
+    margin-bottom: 0px;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 1024px) {
+  .carrousel .cl-3-4 ul li {
+    width: calc(100% / 3 - 20px);
+  }
+
+  #conseils ul li {
+    flex: 1;
+  }
+
+  .main-nav nav ul li span {
+    display: flex;
+  }
+
+  #genial #toDo li {
+    max-width: calc(100% / 4);
+  }
+
+  #genial #toDo li:last-child {
+    display: inherit;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1328px) {
+  /* Rules */
+
+  .submenu ul li {
+    flex: 1 1 0;
+    height: 40px;
+  }
+  .container {
+    width: 74%;
+    margin: auto;
+    box-sizing: border-box;
+  }
+  .flights {
+    display: none !important;
+  }
+}

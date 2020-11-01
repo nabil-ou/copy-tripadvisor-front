@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/fonts.css" />
+    <link rel="stylesheet" href="./assets/css/icon.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <title>Tourisme à Paris 2020 : Visiter Paris- Tripadvisor</title>
+  </head>
+  <body>
+    <div class="popup hidden">
+      <div class="popupbackground"></div>
+      <div class="popupbody">
+        <form id="registerForm">
+          <i class="icon-times close"></i>
+          <h2>Nous contacter</h2>
+
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Prénom"
+          />
+          <input type="text" id="lastname" name="lastname" placeholder="Nom" />
+          <input type="text" id="email" name="email" placeholder="Email" />
+          <input
+            type="text"
+            id="password"
+            name="password"
+            placeholder="Mot de passe"
+          />
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Décrivez-vous en quelques lignes"
+          ></textarea>
+          <input class="submit" type="submit" value="Envoyer le formulaire" />
+        </form>
+      </div>
+    </div>
+
+    <!-- ---------- HEARDER ---------- -->
+
+    <header class="container">
+      <div class="main-nav">
+        <div class="logo-search">
+          <a href="https://www.tripadvisor.fr/"
+            ><img
+              src="./assets/img/Tripadvisor_lockup_horizontal_secondary_registered.svg"
+              alt="logo tripadvisor"
+          /></a>
+          <form class="searchbar">
+            <i class="icon-search"></i><input type="text" />
+          </form>
+        </div>
+        <nav id="desktop-menu">
+          <ul>
+            <li>
+              <a class="divlink" href=""><span></span></a>
+              <i class="icon-pencil_paper"></i><span>Publier</span>
+            </li>
+            <li>
+              <a class="divlink" href=""><span></span></a>
+              <i class="icon-notification_bell"></i><span>Alertes</span>
+            </li>
+            <li>
+              <a class="divlink" href=""><span></span></a>
+              <i class="icon-heart"></i><span>Voyages</span>
+            </li>
+          </ul>
+          <button class="contactOpener">Connectez-vous</button>
+        </nav>
+        <nav id="mobile-menu">
+          <i class="icon-menu_bars mobile-only"></i>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ---------- MAIN ---------- -->
+    <main class="container">
+      <!-- ---------- EXPLOREZ PARIS ---------- -->
+      <section id="explorez-paris">
+        <h1><span>Explorez</span> Paris</h1>
+        <nav class="submenu">
+          <ul>
+            <li>
+              <a class="divlink" href=""><span></span></a>
+              <span>Conseils de voyage</span><i class="icon-destination"></i>
+            </li>
+            <li>
+              <a class="divlink" href=""><span></span></a>
+              <span>Hôtels</span><i class="icon-hotels"></i>
+            </li>
+            <li>
+              <a class="divlink" href=""><span></span></a>
+              <span>Locations de vacances</span
+              ><i class="icon-vacation_rentals"></i>
+            </li>
+            <li>
+              <a class="divlink" href=""><span></span></a>
+              <span>Activités</span><i class="icon-attractions"></i>
+            </li>
+            <li>
+              <a class="divlink" href=""><span></span></a>
+              <span>Restaurants</span><i class="icon-restaurants"></i>
+            </li>
+            <li>
+              <a class="divlink" href=""><span></span></a>
+              <span>Forums de voyage</span><i class="icon-forums"></i>
+            </li>
+            <li class="flights">
+              <a class="divlink" href=""><span></span></a>
+              <span>Vols</span><i class="icon-flights"></i>
+            </li>
+            <li>
+              <a class="divlink" href=""><span></span></a>
+              <span>Plus</span><i class="icon-more_horizontal"></i>
+            </li>
+          </ul>
+        </nav>
+        <div class="pictures">
+          <div class="lgPic">
+            <div class="allpics">
+              <a class="divlink" href="allpics"><span></span></a
+              ><i class="icon-photo"></i> Toutes les photos
+            </div>
+            <div class="lgPicimg">
+              <a class="divlink" href=""><span></span></a>
+            </div>
+          </div>
+          <div class="addpic">
+            <div class="img1">
+              <a class="divlink" href=""><span></span></a>
+            </div>
+            <div class="img2">
+              <a class="divlink" href=""><span></span></a>
+            </div>
+          </div>
+        </div>
+        <nav class="path">
+          <span
+            ><a href="">Europe</a> > <a href="">France</a> >
+            <a href="">Île-de-france</a> > <a href="">Paris</a>
+            <i class="icon-caret_down"></i></span
+          ><span>Visiter : Paris</span>
+        </nav>
+        <div class="description">
+          <div class="cl-left">
+            <h2>La Ville Lumière éblouit en tous points</h2>
+            <p>
+              Aucun autre endroit au monde ne fait autant rêver que Paris. La
+              ville séduit par son art, son architecture, sa culture et sa
+              cuisine, mais il y a aussi des merveilles plus discrètes qui
+              n’attendent qu’à être explorées : les ruelles pavées pittoresques,
+              les pâtisseries au coin de la rue et les petits bistrots douillets
+              qui vous invitent à boire un verre de beaujolais. Préparez-vous à
+              vous approprier Paris.
+            </p>
+          </div>
+          <div class="cl-right">
+            <div>
+              <div>
+                <div><h3>Commencez à organiser Paris</h3></div>
+                <div>
+                  <p>
+                    Créez un voyage pour enregistrer et organiser toutes vos
+                    idées et les visualiser sur une carte.
+                  </p>
+                </div>
+                <div><button>Créez un voyage</button></div>
+              </div>
+              <img src="./assets/img/image_trips_card_medium.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- CONSEILS DE VOYAGE ---------- -->
+
+      <section id="conseils">
+        <div class="linetext">
+          <h2><span>Conseils de voyage</span></h2>
+        </div>
+        <div class="seeall"><a href=""> Tout afficher</a></div>
+        <ul>
+          <li>
+            <a class="divlink" href=""><span></span></a>
+            <img
+              src="./assets/img/periode.svg"
+              alt="meilleure periode pour visiter"
+            />
+            <div>Meilleure période pour visiter</div>
+          </li>
+          <li>
+            <a class="divlink" href=""><span></span></a>
+            <img src="./assets/img/deplacer.svg" alt="se deplacer" />
+            <div>Se déplacer</div>
+          </li>
+          <li>
+            <a class="divlink" href=""><span></span></a>
+            <img src="./assets/img/coutumes.svg" alt="coutumes locals" />
+            <div>Coutumes locales</div>
+          </li>
+          <li>
+            <a class="divlink" href=""><span></span></a>
+            <img src="./assets/img/conseils.svg" alt="conseils de pros" />
+            <div>Conseils de pros</div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ---------- IMMANQUABLE A PARIS---------- -->
+      <section id="immanquable">
+        <div class="linetext">
+          <h2><span>Immanquable à Paris</span></h2>
+        </div>
+
+        <!-- ---------- SE DIVERTIR ---------- -->
+        <div class="carrousel">
+          <div class="cl-1-4">
+            <h3>Se divertir</h3>
+            <p>
+              Des lieux à voir, des rues à explorer et des expériences
+              emblématiques à Paris.
+            </p>
+          </div>
+          <div class="cl-3-4">
+            <ul>
+              <li>
+                <div class="fav-circle"><i class="icon-heart"></i></div>
+                <div class="fav-circle-hover">
+                  <i class="icon-heart_fill"></i>
+                </div>
+                <div class="activity">
+                  <a class="divlink" href=""><span></span></a>
+                  <img src="./assets/img/divertir/eiffeltoren.jpg" alt="" />
+                  <div class="desc-carrousel">
+                    <h4>Tour Eiffel</h4>
+                    <p class="avis">
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_half_refresh"></i>
+                      140 236 avis
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="fav-circle"><i class="icon-heart"></i></div>
+                <div class="fav-circle-hover">
+                  <i class="icon-heart_fill"></i>
+                </div>
+                <div class="activity">
+                  <a class="divlink" href=""><span></span></a>
+                  <img src="./assets/img/divertir/louvre.jpg" alt="" />
+                  <div class="desc-carrousel">
+                    <h4>Musée du Louvre</h4>
+                    <p class="avis">
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_half_refresh"></i>
+                      100 864 avis
+                    </p>
+                    <p class="infos">Bâtiment architecturaux, Musées d'art</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="fav-circle"><i class="icon-heart"></i></div>
+                <div class="fav-circle-hover">
+                  <i class="icon-heart_fill"></i>
+                </div>
+                <div class="activity">
+                  <a class="divlink" href=""><span></span></a>
+                  <img
+                    src="./assets/img/divertir/arc-de-triomphe-at-night.jpg"
+                    alt=""
+                  />
+                  <div class="desc-carrousel">
+                    <h4>Arc de Triomphe</h4>
+                    <p class="avis">
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_half_refresh"></i>
+                      45 089 avis
+                    </p>
+                    <p class="infos">
+                      Bâtiments architecturaux, Sites Historiques
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="fav-circle"><i class="icon-heart"></i></div>
+                <div class="fav-circle-hover">
+                  <i class="icon-heart_fill"></i>
+                </div>
+                <div class="activity">
+                  <a class="divlink" href=""><span></span></a>
+                  <img src="./assets/img/divertir/museRodin.jpg" alt="" />
+                  <div class="desc-carrousel">
+                    <h4>Musée Rodin</h4>
+                    <p class="avis">
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_half_refresh"></i>
+                      12 452 avis
+                    </p>
+                    <p class="infos">Musée spécialisés</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- ---------- SE REPOSER ---------- -->
+        <div class="carrousel">
+          <div class="cl-1-4">
+            <h3>Se reposer</h3>
+            <p>Un mélange de charme, de symboles et de modernité.</p>
+          </div>
+          <div class="cl-3-4">
+            <ul>
+              <li>
+                <div class="fav-circle"><i class="icon-heart"></i></div>
+                <div class="fav-circle-hover">
+                  <i class="icon-heart_fill"></i>
+                </div>
+                <div class="activity">
+                  <a class="divlink" href=""><span></span></a>
+                  <img src="./assets/img/hotels/bristol.jpg" alt="" />
+                  <div class="desc-carrousel">
+                    <h4>Le Bristol Paris</h4>
+                    <p class="avis">
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      2069 avis
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="fav-circle"><i class="icon-heart"></i></div>
+                <div class="fav-circle-hover">
+                  <i class="icon-heart_fill"></i>
+                </div>
+                <div class="activity">
+                  <a class="divlink" href=""><span></span></a>
+                  <img src="./assets/img/hotels/lareserve.jpg" alt="" />
+                  <div class="desc-carrousel">
+                    <h4>La Réserve Paris - Hotel and Spa</h4>
+                    <p class="avis">
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      473 avis
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="fav-circle"><i class="icon-heart"></i></div>
+                <div class="fav-circle-hover">
+                  <i class="icon-heart_fill"></i>
+                </div>
+                <div class="activity">
+                  <a class="divlink" href=""><span></span></a>
+                  <img src="./assets/img/hotels/georgeV.jpg" alt="" />
+                  <div class="desc-carrousel">
+                    <h4>Four Seasons Hotel George V</h4>
+                    <p class="avis">
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      3060 avis
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="fav-circle"><i class="icon-heart"></i></div>
+                <div class="fav-circle-hover">
+                  <i class="icon-heart_fill"></i>
+                </div>
+                <div class="activity">
+                  <a class="divlink" href=""><span></span></a>
+                  <img src="./assets/img/hotels/meurice.jpg" alt="" />
+                  <div class="desc-carrousel">
+                    <h4>Le Meurice</h4>
+                    <p class="avis">
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_half_refresh"></i>
+                      1 348 avis
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ---------- SE RESTAURER ---------- -->
+
+        <div class="carrousel">
+          <div class="cl-1-4">
+            <h3>Se restaurer</h3>
+            <p>Bistrots et bars typiques, et plus encore à Paris.</p>
+          </div>
+          <div class="cl-3-4">
+            <ul>
+              <li>
+                <div class="fav-circle"><i class="icon-heart"></i></div>
+                <div class="fav-circle-hover">
+                  <i class="icon-heart_fill"></i>
+                </div>
+                <div class="activity">
+                  <a class="divlink" href=""><span></span></a>
+                  <img src="./assets/img/restaurer/verjus.jpg" alt="" />
+                  <div class="desc-carrousel">
+                    <h4>Verjus</h4>
+                    <p class="avis">
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_half_refresh"></i>
+                      571 avis
+                    </p>
+                    <p class="infos">€€€€ • Française, Européenne, Moderne</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="fav-circle"><i class="icon-heart"></i></div>
+                <div class="fav-circle-hover">
+                  <i class="icon-heart_fill"></i>
+                </div>
+                <div class="activity">
+                  <a class="divlink" href=""><span></span></a>
+                  <img src="./assets/img/restaurer/114.jpg" alt="" />
+                  <div class="desc-carrousel">
+                    <h4>Le 114 Faubourg</h4>
+                    <p class="avis">
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_empty_refresh"></i>
+                      1754 avis
+                    </p>
+                    <p class="infos">€€€€ • Française, Européenne</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="fav-circle"><i class="icon-heart"></i></div>
+                <div class="fav-circle-hover">
+                  <i class="icon-heart_fill"></i>
+                </div>
+                <div class="activity">
+                  <a class="divlink" href=""><span></span></a>
+                  <img src="./assets/img/restaurer/frenchie.jpg" alt="" />
+                  <div class="desc-carrousel">
+                    <h4>Frenchie</h4>
+                    <p class="avis">
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_empty_refresh"></i>
+                      1294 avis
+                    </p>
+                    <p class="infos">Française</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="fav-circle"><i class="icon-heart"></i></div>
+                <div class="fav-circle-hover">
+                  <i class="icon-heart_fill"></i>
+                </div>
+                <div class="activity">
+                  <a class="divlink" href=""><span></span></a>
+                  <img src="./assets/img/restaurer/colette.jpg" alt="" />
+                  <div class="desc-carrousel">
+                    <h4>La Table de Colette</h4>
+                    <p class="avis">
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_full_refresh"></i>
+                      <i class="icon-bubble_rating_empty_refresh"></i>
+                      248 avis
+                    </p>
+                    <p class="infos">Française, Européenne</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- DANS LES FORUMS ---------- -->
+
+      <section id="forums">
+        <div class="forum-image">
+          <img src="./assets/img/forums_people_narrow.svg" alt="" />
+        </div>
+        <div class="linetext">
+          <h2><span>Dans les forums</span></h2>
+        </div>
+        <div class="seeall"><a href=""> Tout afficher</a></div>
+        <div class="forum-messages">
+          <ul>
+            <li>
+              <span>Week end parisien en amoureux</span>
+              <div class="author">
+                <img src="./assets/img/default-avatar-2020-16.jpg" alt="" />
+                <div class="author-name">
+                  Par Mylène K • <span>9 réponses</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span>Conseils 3 jours a Paris en famille oct 2020</span>
+              <div class="author">
+                <img src="./assets/img/default-avatar-2020-17.jpg" alt="" />
+                <div class="author-name">
+                  Par Elise M • <span>5 réponses</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span>transport entre Paris et Charles de Gaulle</span>
+              <div class="author">
+                <img src="./assets/img/default-avatar-2020-20.jpg" alt="" />
+                <div class="author-name">
+                  Par Marc G • <span>7 réponses</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ---------- LOUER UN LOGEMENT ---------- -->
+
+      <section id="logement">
+        <div class="linetext">
+          <h2><span>Louez un logement pour votre prochaine escapade</span></h2>
+        </div>
+        <h3>Locations populaires à Paris</h3>
+        <div class="seeall"><a href=""> Tout afficher</a></div>
+        <ul>
+          <li>
+            <div class="fav-circle"><i class="icon-heart"></i></div>
+            <div class="fav-circle-hover">
+              <i class="icon-heart_fill"></i>
+            </div>
+            <div class="activity">
+              <a class="divlink" href=""><span></span></a>
+              <img src="./assets/img/logement/bedroom.jpg" alt="" />
+              <div class="desc-carrousel">
+                <h4>
+                  A LITTLE HOUSE NEARBY EIFFEL TOWER - TYPICAL PARISIAN STREET
+                </h4>
+                <p class="avis">
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_half_refresh"></i>
+                  <i class="icon-bubble_rating_empty_refresh"></i>
+                  13 avis
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="fav-circle"><i class="icon-heart"></i></div>
+            <div class="fav-circle-hover">
+              <i class="icon-heart_fill"></i>
+            </div>
+            <div class="activity">
+              <a class="divlink" href=""><span></span></a>
+              <img src="./assets/img/logement/cosycanal.jpg" alt="" />
+              <div class="desc-carrousel">
+                <h4>Cozy Canal Saint Martin Studio (333)</h4>
+                <p class="avis">
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_empty_refresh"></i>
+                  17 avis
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="fav-circle"><i class="icon-heart"></i></div>
+            <div class="fav-circle-hover">
+              <i class="icon-heart_fill"></i>
+            </div>
+            <div class="activity">
+              <a class="divlink" href=""><span></span></a>
+              <img src="./assets/img/logement/93.jpg" alt="" />
+              <div class="desc-carrousel">
+                <h4>Beautiful Latin Quarter 1 Bedroom (197)</h4>
+                <p class="avis">
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  3 avis
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="fav-circle"><i class="icon-heart"></i></div>
+            <div class="fav-circle-hover">
+              <i class="icon-heart_fill"></i>
+            </div>
+            <div class="activity">
+              <a class="divlink" href=""><span></span></a>
+              <img src="./assets/img/logement/jardin.jpg" alt="" />
+              <div class="desc-carrousel">
+                <h4>Le Jardin Du Marais</h4>
+                <p class="avis">
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  37 avis
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ---------- PLUS DE CHOIX ---------- -->
+
+      <section id="genial">
+        <div class="linetext">
+          <h2><span>Plus de choix à Paris</span></h2>
+        </div>
+
+        <!-- ---------- RESTOS LOCAUX ---------- -->
+
+        <h3>Restos locaux</h3>
+        <ul id="toDo">
+          <li>
+            <div class="fav-circle"><i class="icon-heart"></i></div>
+            <div class="fav-circle-hover">
+              <i class="icon-heart_fill"></i>
+            </div>
+            <div class="activity">
+              <a class="divlink" href=""><span></span></a>
+              <img src="./assets/img/restoLocaux/jean-yves.jpg" alt="" />
+              <div class="desc-carrousel">
+                <h4>FrenchyTaste par Jean-Yves Le Chef</h4>
+                <p class="avis">
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_half_refresh"></i>
+                  <i class="icon-bubble_rating_empty_refresh"></i>
+                  221 avis
+                </p>
+                <p class="infos">
+                  €€€€ • Française, Asiatique, Fusion, Brasserie gastronomique
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="fav-circle"><i class="icon-heart"></i></div>
+            <div class="fav-circle-hover">
+              <i class="icon-heart_fill"></i>
+            </div>
+            <div class="activity">
+              <a class="divlink" href=""><span></span></a>
+              <img
+                src="./assets/img/restoLocaux/la-grange-aux-canards.jpg"
+                alt=""
+              />
+              <div class="desc-carrousel">
+                <h4>La Grange Aux Canards</h4>
+                <p class="avis">
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  499 avis
+                </p>
+                <p class="infos">€€-€€€ • Française</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="fav-circle"><i class="icon-heart"></i></div>
+            <div class="fav-circle-hover">
+              <i class="icon-heart_fill"></i>
+            </div>
+            <div class="activity">
+              <a class="divlink" href=""><span></span></a>
+              <img src="./assets/img/restoLocaux/aubergeade.jpg" alt="" />
+              <div class="desc-carrousel">
+                <h4>L'Aubergeade</h4>
+                <p class="avis">
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_half_refresh"></i>
+                  1035 avis
+                </p>
+                <p class="infos">€€-€€€ • Française, Européenne, Saine</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="fav-circle"><i class="icon-heart"></i></div>
+            <div class="fav-circle-hover">
+              <i class="icon-heart_fill"></i>
+            </div>
+            <div class="activity">
+              <a class="divlink" href=""><span></span></a>
+              <img
+                src="./assets/img/restoLocaux/le-cabanon-de-la-butte.jpg"
+                alt=""
+              />
+              <div class="desc-carrousel">
+                <h4>Le Cabanon de la Butte</h4>
+                <p class="avis">
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_half_refresh"></i>
+                  589 avis
+                </p>
+                <p class="infos">€€-€€€ • Française, Européenne</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- ---------- BARS ---------- -->
+
+        <h3>Bars</h3>
+        <ul id="toDo">
+          <li>
+            <div class="fav-circle"><i class="icon-heart"></i></div>
+            <div class="fav-circle-hover">
+              <i class="icon-heart_fill"></i>
+            </div>
+            <div class="activity">
+              <a class="divlink" href=""><span></span></a>
+              <img src="./assets/img/Bars/frog-hop-house.jpg" alt="" />
+              <div class="desc-carrousel">
+                <h4>Frog Hop House</h4>
+                <p class="avis">
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_half_refresh"></i>
+                  <i class="icon-bubble_rating_empty_refresh"></i>
+                  456 avis
+                </p>
+                <p class="infos">€€-€€€ • Américaine, Bar, Pub, Bar à bières</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="fav-circle"><i class="icon-heart"></i></div>
+            <div class="fav-circle-hover">
+              <i class="icon-heart_fill"></i>
+            </div>
+            <div class="activity">
+              <a class="divlink" href=""><span></span></a>
+              <img src="./assets/img/Bars/ptitscrus.jpg" alt="" />
+              <div class="desc-carrousel">
+                <h4>Les Petits Crus</h4>
+                <p class="avis">
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_half_refresh"></i>
+                  220 avis
+                </p>
+                <p class="infos">€€-€€€ • Française, Européenne, Bar à vins</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="fav-circle"><i class="icon-heart"></i></div>
+            <div class="fav-circle-hover">
+              <i class="icon-heart_fill"></i>
+            </div>
+            <div class="activity">
+              <a class="divlink" href=""><span></span></a>
+              <img src="./assets/img/Bars/lavache.jpg" alt="" />
+              <div class="desc-carrousel">
+                <h4>La Vache Dans Les Vignes</h4>
+                <p class="avis">
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_half_refresh"></i>
+                  193 avis
+                </p>
+                <p class="infos">€€-€€€ • Française, Européenne, Bar à vins</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="fav-circle"><i class="icon-heart"></i></div>
+            <div class="fav-circle-hover">
+              <i class="icon-heart_fill"></i>
+            </div>
+            <div class="activity">
+              <a class="divlink" href=""><span></span></a>
+              <img src="./assets/img/Bars/compas.jpg" alt="" />
+              <div class="desc-carrousel">
+                <h4>Le Compas</h4>
+                <p class="avis">
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_full_refresh"></i>
+                  <i class="icon-bubble_rating_half_refresh"></i>
+                  583 avis
+                </p>
+                <p class="infos">€€-€€€ • Française, Bar, Bars-restaurants</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- ---------- FOOTER ---------- -->
+
+    <footer>
+      <div class="container">
+        <div class="cl-2-3">
+          <img
+            src="./assets/img/Tripadvisor_logoset_solid_green.svg"
+            alt="logo"
+          />
+          <span
+            >Made at <a href="https://www.lereacteur.io/">le Reacteur</a> by
+            <a href="https://github.com/nabil-ou">Nabil</a> - 2020</span
+          >
+        </div>
+        <div class="cl-1-3">
+          <select class="footerselect" id="devise">
+            <option value="EUR">€ EUR</option>
+            <option value="USD">$ USD</option>
+            <option value="GBP">£ GBP</option>
+            <option value="CAD">$ CAD</option>
+          </select>
+          <select class="footerselect" id="country">
+            <option value="france">France</option>
+            <option value="sverige">Sverige</option>
+            <option value="nederland">Nederland</option>
+            <option value="turkiye">Türkiye</option>
+          </select>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
